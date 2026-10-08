@@ -105,15 +105,18 @@ public class Empleado {
      * @return true si la edad es valida y fue asignada; false en caso contrario
      */
     public boolean setEdad(int nuevaEdad) {
-        // ====================================================================
-        // ESCRIBE TU CODIGO AQUI:
-        // PISTA: Evalua con un if (nuevaEdad >= 18 && nuevaEdad <= 70)
-        // ====================================================================
+        if (nuevaEdad >= 18 && nuevaEdad <= 70 ) {
+            this.edad = nuevaEdad;
+            return true;
+        } else {
+            System.out.println("Error La edad debe ser entre 18 y 70 años");
+            if (this.edad == 0) {
+                this.edad = 18;
+            }
+            return false;
+        } 
+        }
 
-        // [PLANTILLA TEMPORAL]: Reemplazar con tu implementacion completa
-        this.edad = nuevaEdad; 
-        return true;
-    }
 
     /**
      * TODO (ACTIVIDAD ESTUDIANTE):
@@ -129,16 +132,17 @@ public class Empleado {
      * @return true si el salario cumple con la invariante; false en caso contrario
      */
     public boolean setSueldo(double nuevoSueldo) {
-        // ====================================================================
-        // ESCRIBE TU CODIGO AQUI:
-        // PISTA: Evalua con un if (nuevoSueldo >= SALARIO_BASICO_ECUADOR)
-        // ====================================================================
-
-        // [PLANTILLA TEMPORAL]: Reemplazar con tu implementacion completa
-        this.sueldo = nuevoSueldo;
-        return true;
+        if (nuevoSueldo >= SALARIO_BASICO_ECUADOR) {
+            this.sueldo = nuevoSueldo; 
+            return true;
+        } else {
+            System.out.println("ERROR INVARIANTE El sueldo no puede ser inferior a $" + SALARIO_BASICO_ECUADOR);
+            if (this.sueldo == 0) {
+                this.sueldo = SALARIO_BASICO_ECUADOR;
+            }
+            return false;
+        }
     }
-
     // ------------------------------------------------------------------------
     // METODO DE IMPRESION DE FICHA LABORAL
     // ------------------------------------------------------------------------
