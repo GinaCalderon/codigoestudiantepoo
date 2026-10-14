@@ -109,7 +109,7 @@ public class Empleado {
             this.edad = nuevaEdad;
             return true;
         } else {
-            System.out.println("Error La edad debe ser entre 18 y 70 años");
+            System.out.println("[ERROR INVARIANTE] Edad invalida (" + nuevaEdad + " anios). La edad debe ser entre 18 y 70 años");
             if (this.edad == 0) {
                 this.edad = 18;
             }
@@ -136,7 +136,7 @@ public class Empleado {
             this.sueldo = nuevoSueldo; 
             return true;
         } else {
-            System.out.println("ERROR INVARIANTE El sueldo no puede ser inferior a $" + SALARIO_BASICO_ECUADOR);
+            System.out.println("[ERROR INVARIANTE] El sueldo ($" + String.format("%.2f", nuevoSueldo) + ") El sueldo no puede ser inferior al SBU de Ecuador ($" + String.format("%.2f", SALARIO_BASICO_ECUADOR) + ").");
             if (this.sueldo == 0) {
                 this.sueldo = SALARIO_BASICO_ECUADOR;
             }
