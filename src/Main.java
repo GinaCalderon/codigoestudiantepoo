@@ -24,5 +24,25 @@ public class Main {
         System.out.println("El cargo del empleado es: "+oEmpleado.getCargo());
 
         System.out.println("=======================================================================");
+    
+
+//Prueba 1: Intentar asignar una edad invalida
+System.out.println("\n[PRUEBA 1] Intento de asignar edad invalida (14 anios):");
+oEmpleado.setEdad(14);
+
+//Prueba 2: Intentar asignar un sueldo inferior al salario basico
+System.out.println("\n[PRUEBA 2] Intento de asignar sueldo invalido ($200.00):");
+oEmpleado.setSueldo(200);
+
+//Prueba 3: Asignar valores validos 
+System.out.println("\n[PRUEBA 3] Asignacion de valores validos:");
+oEmpleado.setEdad(29);
+oEmpleado.setSueldo(950);
+
+//Mostrar la ficha final del empleado 
+oEmpleado.imprimirFicha();
+
+    System.out.println("=======================================================================");
+
     }
 }
